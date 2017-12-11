@@ -1,47 +1,106 @@
-html,body{
-	margin: 0;
-	padding: 0;
+/*
+ CSS重置
+ * */
+
+body,
+ul,
+ol {
+	margin: 0px;
+	padding: 0px;
 }
-#CF{
-	text-align: center;
-	width: 960px;
+
+#flash {
+	width: 1226px;
 	height: 460px;
-	/*border: 1px solid red;*/
+	margin: 100px;
+	position: relative;
 }
-#img01{
-	position: absolute;
-	z-index: 100;
-	
+
+
+/*图片css*/
+
+ul,
+ol {
+	list-style: none;
 }
-#img02{
+
+ul li {
+	width: 600px;
+	height: 300px;
 	position: absolute;
-	z-index: 80;
+	top: 0px;
+	left: 0px;
+	opacity: 0;
+	transition: 0.5s;
 }
-#img03{
-	position: absolute;
-	z-index: 50;
+
+/*ul li:nth-of-type(1) {
+	background: green;
 }
-#img04{
-	position: absolute;
-	z-index: 30;
+
+ul li:nth-of-type(2) {
+	background: blue;
 }
-#img05{
-	position: absolute;
-	z-index: 10;
+
+ul li:nth-of-type(3) {
+	background: red;
+}*/
+
+ul li.now {
+	z-index: 1;
+	opacity: 1;
 }
-#gt{
+
+
+/*箭头css*/
+
+nav a {
 	position: absolute;
-	transform: scale(3,3);
-	margin-top: 200px;
-	margin-left: 1670px;
-	z-index: 101;
-	color: #ccc;
+	top: 200px;
+	z-index: 999;
+	font-size: 36px;
+	width: 40px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	text-decoration: none;
 }
-#lt{
+
+nav a:hover {
+	background: #333;
+	color: white;
+}
+
+nav a:nth-of-type(1) {
+	left: 0px;
+}
+
+nav a:nth-of-type(2) {
+	right: 0px;
+}
+
+
+/*原点css*/
+
+ol {
 	position: absolute;
-	transform: scale(3,3);
-	margin-top: 200px;
-	margin-left: 500px;
-	z-index: 101;
-	color: #ccc;
+	bottom: 50px;
+	right: 50px;
+	z-index: 99;
+}
+
+ol li {
+	float: left;
+	width: 12px;
+	height: 12px;
+	border: 2px solid #333;
+	background: #ccc;
+	border-radius: 50%;
+	margin: 0px 5px;
+}
+
+ol li.nowx {
+	background: white;
+	border-color: red;
+	box-shadow: 0px 0px 3px black;
 }
