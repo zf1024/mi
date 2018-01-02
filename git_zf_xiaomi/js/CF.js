@@ -30,6 +30,15 @@ var next=function(){
 	playinit(flag);
 }
 arrs[1].addEventListener("click",next);
+(function(){
+	for(i=0;i<Lis.length;i++){
+		circles[i].index=i;
+		circles[i].addEventListener("click",function(){
+			flag=this.index;
+			playinit(flag);
+		})
+	}
+}())
 //自动轮播
 var timer=setInterval(next,3000);
 
