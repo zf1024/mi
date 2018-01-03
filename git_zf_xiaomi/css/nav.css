@@ -1,11 +1,38 @@
-ul{
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+header{
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+#contain{
 	position: absolute;
-	left: 50%;
+	left: 0;
+	right: 0;
+	margin: auto;
+	width: 1226px;
+	display: flex;
+	border: solid 1px red;
+}
+#icon{
+	flex: 1;
+}
+ul{
+	height: 100px;
+	flex: 3;
+	background: red;
+	display: flex;
 }
 ul li{
-	position: relative;
-	right: 50%;
+	margin: auto;
+	flex: auto;
 	float: left;
-	list-style: none;
-	margin: 0 10px 0 0;
+	text-align: center; 
+}
+
+#search{
+	flex:1;
 }
